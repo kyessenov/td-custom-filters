@@ -1,0 +1,12 @@
+name: istio-config-selector
+type: SIDECAR_PROXY
+httpFilters:
+  httpFilters:
+    - https://networkservices.googleapis.com/v1alpha1/projects/XXXPROJECT/locations/global/httpFilters/istio-metadata-exchange
+    - https://networkservices.googleapis.com/v1alpha1/projects/XXXPROJECT/locations/global/httpFilters/istio-stats-inbound
+endpointMatcher:
+  metadataLabelMatcher:
+    metadataLabelMatchCriteria: MATCH_ANY
+    metadataLabels:
+      - labelName: "ISTIO_VERSION"
+        labelValue: "1.6.1"
