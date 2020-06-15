@@ -1,0 +1,22 @@
+name: istio-stats-outbound
+filterName: envoy.filters.http.wasm
+configTypeUrl: type.googleapis.com/udpa.type.v1.TypedStruct
+config: |
+  {
+    "typeUrl": "envoy.extensions.filters.http.wasm.v3.Wasm",
+    "value": {
+      "config": {
+        "rootId": "stats_outbound",
+        "configuration": "{\"debug\": \"false\", \"stat_prefix\": \"istio\"}",
+        "vmConfig": {
+          "vmId": "stats_outbound",
+          "runtime": "envoy.wasm.runtime.null",
+          "code": {
+            "local": {
+              "inlineString": "envoy.wasm.stats"
+            }
+          }
+        }
+      }
+    }
+  }

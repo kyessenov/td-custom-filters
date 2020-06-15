@@ -1,0 +1,6 @@
+creationTimestamp: '2020-06-09T16:31:52.800-07:00'
+kind: compute#targetHttpProxy
+name: td-gke-proxy
+selfLink: https://www.googleapis.com/compute/alpha/projects/XXXPROJECT/global/targetHttpProxies/td-gke-proxy
+selfLinkWithId: https://www.googleapis.com/compute/alpha/projects/XXXPROJECT/global/targetHttpProxies/7846710457997829383
+urlMap: https://www.googleapis.com/compute/alpha/projects/XXXPROJECT/global/urlMaps/td-gke-url-map
