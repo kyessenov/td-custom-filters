@@ -59,7 +59,7 @@ See the resulting manifest [here](trafficdirector_service_sample.yaml.injected).
 
 ### Step 1b: Inject into a client
 
-We are going to be using a simple [curl deployment](curl-deployment.yaml) as a client. Repeate the previous steps:
+We are going to be using a simple [curl deployment](curl-deployment.yaml) as a client. Repeat the previous steps:
 
 - Inject proxy with `kube-inject`.
 - Remove `istio-ca-cert` volume and volume mounts.
@@ -123,7 +123,7 @@ httpFilters:
 Apply the modified configuration:
 
 ```
-gcloud alpha compute target-http-proxies import td-gke-proxy-mx --source=thp-with-mx-stats.yaml
+gcloud alpha compute target-http-proxies import td-gke-proxy-mx-stats --source=thp-with-mx-stats.yaml
 ```
 
 Enable the modified configuration:
